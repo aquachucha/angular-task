@@ -1,0 +1,28 @@
+:root {
+  --text-primary: #585858;
+  --text-secondary: #a1a1a1;
+
+  --bg-primary: #fff;
+  --bg-secondary: #f8f8f8;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Nunito, sans-serif;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cdk-dialog-container {
+  outline: none;
+}

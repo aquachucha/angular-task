@@ -1,0 +1,43 @@
+$animation-duration: 2000ms !default;
+
+$animation-step-1: cubic-bezier(0.15, 0, 0.515058, 0.409685) !default;
+$animation-step-2: cubic-bezier(0.31033, 0.284058, 0.8, 0.733712) !default;
+$animation-step-3: cubic-bezier(0.4, 0.627035, 0.6, 0.902026) !default;
+
+@keyframes bar-animation {
+  0% {
+    width: 0;
+    animation-timing-function: $animation-step-1;
+    transform: translateX(0);
+  }
+  25% {
+    width: inherit;
+    animation-timing-function: $animation-step-2;
+    transform: translateX(40%);
+  }
+  50% {
+    animation-timing-function: $animation-step-3;
+    transform: translateX(85%);
+  }
+  100% {
+    transform: translateX(170%);
+  }
+}
+
+.loader {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: .25rem;
+  z-index: 99;
+
+  &__bar{
+    animation: bar-animation $animation-duration infinite linear;
+    left: -55%;
+    background: red;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    transition: none;
+  }
+}

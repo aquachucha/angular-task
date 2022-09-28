@@ -1,0 +1,21 @@
+.search {
+  & > input {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4rem;
+    padding: .5rem 1rem;
+    font-weight: 500;
+    border: 1px solid #ccc;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      font-weight: 400;
+      color: rgba(182, 182, 182, 0.5);
+    }
+  }
+}
+
+

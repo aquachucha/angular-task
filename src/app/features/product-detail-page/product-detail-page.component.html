@@ -1,0 +1,21 @@
+<at-page-layout>
+  <a
+    class="products-detail-page__back"
+    routerLink="/"
+  ><</a>
+  <div
+    class="products-detail-page__wrapper"
+    *ngIf="product$ | async as product; else notFound"
+  >
+    <div class="products-detail-page__content">
+      <at-product-card [product]="product"></at-product-card>
+      <p
+        *ngIf="product.description as description"
+        class="products-detail-page__desc"
+      >{{ description }}</p>
+    </div>
+  </div>
+  <ng-template #notFound>
+    <at-not-found *ngIf="!(loading$ | async)"></at-not-found>
+  </ng-template>
+</at-page-layout>

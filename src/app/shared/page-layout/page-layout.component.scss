@@ -1,0 +1,22 @@
+:host {
+  display: grid;
+  grid-template-areas: 'header' 'content';
+  grid-template-rows: min-content auto;
+  height: 100vh;
+}
+
+.page-layout {
+  &__header {
+    grid-area: header;
+    background: #fff;
+    padding: .5rem 1rem;
+  }
+
+  &__content {
+    grid-area: content;
+    overflow: auto;
+    padding: 0 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+}

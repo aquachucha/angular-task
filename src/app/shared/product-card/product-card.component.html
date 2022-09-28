@@ -1,0 +1,10 @@
+<div class="product-card__img">
+  <img [src]="product.image" [alt]="product.name" loading="lazy">
+</div>
+<div class="product-card__info">
+  <p class="product-card__name">{{ product.name }}</p>
+  <div class="product-card__price">
+    <span>{{ product.price / 100 | number : ".0-0"}}.</span>
+    <span>{{ product.price % 100 | number : "2.0-0"}}</span>
+  </div>
+</div>

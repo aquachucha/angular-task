@@ -1,0 +1,64 @@
+.products-detail-page {
+  &__back {
+    display: inline-flex;
+    text-decoration: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: .5rem;
+    margin: .5rem 0;
+    background: white;
+    border-radius: 50%;
+    min-width: 2rem;
+    width: 2rem;
+    min-height: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    width: 80%;
+    max-width: 20rem;
+  }
+
+  &__desc {
+    color: var(--text-secondary);
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    background: var(--bg-primary);
+    border-radius: 1rem;
+    padding-bottom: 2rem;
+
+    & .product-card {
+      &__info {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-bottom: 1rem;
+      }
+
+      &__name {
+        font-size: 2rem;
+        margin: .5rem 0;
+      }
+
+      &__price {
+        font-size: 1.75rem;
+        font-weight: 600;
+        background: #d50606;
+        color: #fff;
+        padding: .5rem 1rem;
+        border-radius: .5rem;
+
+        & :nth-child(2) {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}

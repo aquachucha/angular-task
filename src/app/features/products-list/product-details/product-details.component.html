@@ -1,0 +1,5 @@
+<at-product-card [product]="product"></at-product-card>
+<p
+  *ngIf="product.description as description"
+  class="product-details__desc"
+>{{ description }}</p>

@@ -1,0 +1,27 @@
+<at-page-layout>
+  <div class="products-list__title">
+    <h1>Products</h1>
+    <at-search
+      [placeholder]="'Find a product by name...'"
+      [value]="searchValue"
+      (valueChange)="onSearchChange($event)"
+    ></at-search>
+  </div>
+
+  <ng-container *ngIf="products$ | async as products">
+    <div
+      class="products-list__grid"
+      *ngIf="products.length; else notFound"
+    >
+      <at-product-card
+        *ngFor="let product of products; trackBy: trackProductById"
+        [product]="product"
+        (click)="openProductDetails(product.product_id)"
+      ></at-product-card>
+    </div>
+    <ng-template #notFound>
+      <at-not-found></at-not-found>
+    </ng-template>
+  </ng-container>
+</at-page-layout>
+

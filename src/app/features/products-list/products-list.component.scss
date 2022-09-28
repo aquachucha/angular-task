@@ -1,0 +1,117 @@
+$mobile: 425px;
+$tablet: 768px;
+
+.products-list {
+  &__dialog {
+    background: var(--bg-primary);
+    width: 30vw;
+    min-width: 20rem;
+    outline: none;
+    border-radius: 1rem;
+    max-height: 90vh;
+    overflow: auto;
+
+    & .product-details {
+      &__desc {
+        margin: 0;
+        padding: 2rem 2rem 2rem 2rem;
+        color: var(--text-secondary);
+        background: var(--bg-secondary);
+      }
+    }
+
+    & .product-card {
+      &__info {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 2rem;
+        margin-top: -2rem;
+      }
+
+      &__name {
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+
+      &__price {
+        font-size: 1.5rem;
+        font-weight: 600;
+
+        & :nth-child(2) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+
+    & .search {
+      width: 20rem;
+      padding-left: 1rem;
+    }
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      justify-content: stretch;
+      padding-bottom: 1rem;
+
+      & .search {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: .5rem;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  & .product-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    border-radius: 0.5rem;
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__name {
+      align-self: start;
+    }
+
+    &__price {
+      border-radius: .5rem;
+      padding: .5rem .75rem;
+      box-shadow: 0 0 2px rgb(0 0 0 / 20%);
+      align-self: end;
+      font-size: 1.25rem;
+      font-weight: bold;
+
+      & :nth-child(2) {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+
