@@ -60,10 +60,6 @@ This structure consists of the following layers:
 
 1. **Data**. The whole application depends on the logic of this data layer. It basically dictates the way data is
    organized and managed.
-
-   _P.S. There is also an 'Adapter' between Facade and Data Service (e.g. REST API Service) to isolate application from
-   the API and its potential changes._
-
 2. **UI**. Contains all the features and represents the whole interface of the app. Communicates with the Data layer
    using Facade service.
 3. **Features**. Set of smart components. The main building block of the UI.
